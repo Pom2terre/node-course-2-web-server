@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // set default port to env var PORT
 // or use port 3000 as default
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 var app = express();
 
