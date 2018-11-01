@@ -2,6 +2,10 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+// set default port to env var PORT
+// or use port 3000 as default
+var port = process.env.PORT || 3000;
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -63,6 +67,6 @@ app.get('/oupps', (req, res) => {
 });
 
 // open the browser on port 3000 and display a msg to the console.
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
